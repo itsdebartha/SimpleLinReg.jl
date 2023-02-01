@@ -3,6 +3,9 @@ uuid = "4a3245e2-a87e-4a6b-976b-067b58f40b40"
 authors = ["Debartha Paul"]
 version = "0.1.0"
 
+[deps]
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
 [compat]
 julia = "1"
 
