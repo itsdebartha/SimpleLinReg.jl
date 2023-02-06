@@ -3,11 +3,13 @@ struct LinearRegression
     intrcpt::Float64
 end
 
-function linreg(x::Vector,y::Vector,intrcept::Bool)
+function linreg(x::Vector,y::Vector;intrcept::Bool = true)
+    β = cov(x,y,corrected=false)/var(x,corrected=false)
     if intrcept
-        lr = LinearRegression(cov(x,y,corrected=false)/var(x,corrected=false), mean(y)-mean(x)*cov(x,y,corrected=false)/var(x,corrected=false))
+        α = mean(y)-mean(x)*β
     else
-        lr = LinearRegression(cov(x,y,corrected=false)/var(x,corrected=false), 0)
+        α = 0
     end
+    lr = LinearRegression(β,α)
     return lr
 end
