@@ -13,10 +13,11 @@ Pkg.add(url = "https://github.com/itsdebartha/SimpleLinReg.jl.git")
 
 This package implements the simple linear regression using the solutions by solving the normal equations. The assumed model is:
 ```math
-y = \alpha + \beta * x
+y_i = \alpha + \beta x_i + \epsilon_i
 ```
+The normal equations are then obtained by minimising the squared errors (or $\sum_{i=1}^n \epsilon_i^2$)
 The estimates of the slope and the intercepts are:
 ```math
-\hat{\beta} = \frac{Cov(x,y)}{Var(x)}
+\hat{\beta} = \frac{Cov(x,y)}{Var(x)} \\
 \hat{\alpha} = \bar{y} - \hat{\beta} * \bar{x}
 ```
