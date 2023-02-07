@@ -48,6 +48,8 @@ where the variable $i$ takes the values from $1$ to $n$ (number of observations)
 
 The estimates of the slope and the intercepts, thus obtained, are:
 ```math
-\hat{\beta} = \frac{Cov(x,y)}{Var(x)} //
-\hat{\alpha} = \bar{y} - \hat{\beta} * \bar{x}
+\begin{align}
+\hat{\beta} = \frac{Cov(x,y)}{Var(x)} \\
+\hat{\alpha} = \bar{y} - \hat{\beta}\bar{x}
+\end{align}
 ```
