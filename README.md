@@ -13,13 +13,29 @@ Pkg.add(url = "https://github.com/itsdebartha/SimpleLinReg.jl.git")
 ```
 ##  Usage:
 ```
-using Distributions, Random, SimpleLinReg
+using SimpleLinReg
+using Distributions, Random
 
-epsilon = rand(Normal(),100)
-x = rand(Uniform(),100)
+epsilon = rand(Normal(),1000)
+x = rand(Uniform(),1000)
 y = 2 .+5x .+epsilon
 
 linreg(x,y)
+```
+##  Output:
+```
+SIMPLE LINEAR REGRESSION IN TWO VARIABLES:
+==========================================
+Slope:       4.99556
+Intercept:   2.00256
+```
+##  Tests:
+```
+@test linreg(x,y,intrcept = true).slope ≈ 5 atol = 0.2
+Test passed
+
+@test linreg(x,y,intrcept = false).intrcpt == 0
+Test passed
 ```
 
 ----
@@ -32,6 +48,6 @@ where the variable $i$ takes the values from $1$ to $n$ (number of observations)
 
 The estimates of the slope and the intercepts, thus obtained, are:
 ```math
-\hat{\beta} = \frac{Cov(x,y)}{Var(x)} \\
+\hat{\beta} = \frac{Cov(x,y)}{Var(x)} //
 \hat{\alpha} = \bar{y} - \hat{\beta} * \bar{x}
 ```

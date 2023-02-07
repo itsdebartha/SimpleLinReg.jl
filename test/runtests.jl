@@ -1,8 +1,10 @@
 using SimpleLinReg
 using Test
+using Distributions, Random
 
-x = [1.5,2.3,6.3,5.6,8.1]
-y = [3.2,5.6,9.6,8.7,10.1]
+ϵ = rand(Normal(),1000)
+x = rand(Uniform(),1000)
+y = 2 .+5x .+ϵ
 
 linreg(x,y;intrcept = true)
 linreg(x,y;intrcept = false)
@@ -10,6 +12,6 @@ linreg(x,y;intrcept = false)
 @testset "SimpleLinReg.jl" begin
     # Write your tests here.
     @test linreg([3,4],[5,6]) == LinearRegression(1,2)
-    @test linreg(x,y,intrcept = true).slope ≈ 1.02 atol = 0.003
+    @test linreg(x,y,intrcept = true).slope ≈ 5 atol = 0.2
     @test linreg(x,y,intrcept = false).intrcpt == 0
 end
