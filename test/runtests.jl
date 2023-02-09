@@ -7,12 +7,12 @@ rng = StableRNG(1)
 x = rand(rng,Uniform(),1000)
 y = 2 .+5x .+ϵ
 
-linreg(x,y;intrcept = true)
-linreg(x,y;intrcept = false)
+linreg(x,y;intercept = true)
+linreg(x,y;intercept = false)
 
 @testset "SimpleLinReg.jl" begin
     # Write your tests here.
     @test linreg([3,4],[5,6]) == LinearRegression(1,2)
-    @test linreg(x,y,intrcept = true).slope ≈ 5 atol = 0.2
-    @test linreg(x,y,intrcept = false).intrcpt == 0
+    @test linreg(x,y,intercept = true).slope ≈ 5 atol = 0.2
+    @test linreg(x,y,intercept = false).intrcpt == 0
 end
