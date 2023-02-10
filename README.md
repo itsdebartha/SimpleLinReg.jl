@@ -60,3 +60,8 @@ The estimates of the slope and the intercepts, thus obtained, are:
 \hat{\alpha} = \bar{y} - \hat{\beta}\bar{x}
 \end{align}
 ```
+
+----
+
+#####   Upcoming:
+-   Significance tests for estimated parameters
