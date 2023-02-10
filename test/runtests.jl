@@ -7,7 +7,7 @@ rng = StableRNG(1)
 x = rand(rng,Uniform(),1000)
 y = 2 .+5x .+ϵ
 
-linreg(x,y;intercept = true)
+linreg(x,y)
 linreg(x,y;intercept = false)
 
 @testset "SimpleLinReg.jl" begin

@@ -13,21 +13,28 @@ Pkg.add(url = "https://github.com/itsdebartha/SimpleLinReg.jl.git")
 ```
 ##  Usage:
 ```
-using SimpleLinReg
-using Distributions, Random
+using Distributions, Random, StableRNGs
 
-epsilon = rand(Normal(),1000)
-x = rand(Uniform(),1000)
-y = 2 .+5x .+epsilon
+rng = StableRNG(1)
+ϵ = rand(rng,Normal(),1000)
+x = rand(rng,Uniform(),1000)
+y = 2 .+5x .+ϵ
 
 linreg(x,y)
+linreg(x,y;intercept = false)
 ```
 ##  Output:
 ```
 SIMPLE LINEAR REGRESSION IN TWO VARIABLES:
 ==========================================
-Slope:       4.99556
-Intercept:   2.00256
+Slope:       5.04638
+Intercept:   1.98306
+```
+```
+SIMPLE LINEAR REGRESSION IN TWO VARIABLES:
+==========================================
+Slope:       5.04638
+Intercept:   0.0
 ```
 ##  Tests:
 ```
