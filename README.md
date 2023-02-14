@@ -1,6 +1,6 @@
 # SimpleLinReg
 
-*SimpleLinReg* is a Julia package that implements the simple linear regression with only one dependent and one independent variable.
+*SimpleLinReg* is a Julia package that implements the simple linear regression with only one dependent and one independent variable. The possible use cases for this package might be to demonstrate the efficiency of simple linear regression in two variables during the undergrad studies. Being simple and intuitive, it can handle enough data, but in only two variables.
 
 [![Build Status](https://github.com/itsdebartha/SimpleLinReg.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/itsdebartha/SimpleLinReg.jl/actions/workflows/CI.yml?query=branch%3Amaster)
 
@@ -64,4 +64,5 @@ The estimates of the slope and the intercepts, thus obtained, are:
 ----
 
 #####   Upcoming:
--   Significance tests for estimated parameters
+-   Ability to handle missing values
+-   Significance tests for estimated parameters  

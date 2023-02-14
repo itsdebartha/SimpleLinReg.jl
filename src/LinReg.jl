@@ -11,6 +11,8 @@ Compute the Linear Regression parameters for regression of `y` on `x`.
 If `intercept` is unspecified, defaults to `intercept` as `true`.
 
 Mismatching length of vectors `x` and `y` returns `DimensionMismatch`.
+
+This function cannot handle missing values, yet.
 """
 function linreg(x::Vector,y::Vector;intercept::Bool = true)
     length(x) == length(y) || throw(DimensionMismatch("size of x and y does not match"))
