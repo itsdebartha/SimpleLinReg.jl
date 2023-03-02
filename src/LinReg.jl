@@ -1,3 +1,7 @@
+"""
+LinearRegression Structure containing the slope and intercept, both of type `Float64`
+"""
+
 struct LinearRegression
     slope::Float64
     intrcpt::Float64
