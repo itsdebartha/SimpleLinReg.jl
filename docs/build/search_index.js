@@ -1,3 +1,3 @@
 var documenterSearchIndex = {"docs":
-[]
+[{"location":"#SimpleLinReg.jl-Documentation","page":"SimpleLinReg.jl Documentation","title":"SimpleLinReg.jl Documentation","text":"","category":"section"},{"location":"","page":"SimpleLinReg.jl Documentation","title":"SimpleLinReg.jl Documentation","text":"linreg(x::Vector,y::Vector;intercept::Bool = true)","category":"page"},{"location":"#SimpleLinReg.linreg-Tuple{Vector, Vector}","page":"SimpleLinReg.jl Documentation","title":"SimpleLinReg.linreg","text":"linreg(x::Vector,y::Vector;intercept::Bool = true)\n\nCompute the Linear Regression parameters for regression of y on x.\n\nIf intercept is unspecified, defaults to intercept as true.\n\nMismatching length of vectors x and y returns DimensionMismatch.\n\nThis function cannot handle missing values, yet.\n\n\n\n\n\n","category":"method"}]
 }
