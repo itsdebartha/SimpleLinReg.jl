@@ -11,3 +11,4 @@ linreg(x,y)
 linreg(x,y;intercept = false)
 
 include("LinReg.jl")
+include("show.jl")
