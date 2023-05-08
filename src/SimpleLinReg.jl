@@ -1,6 +1,6 @@
 module SimpleLinReg
 
-using Statistics
+using StatsBase
 
 # Write your package code here.
 
