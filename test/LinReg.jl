@@ -11,5 +11,8 @@ model2 = linreg(height, weight; intercept = false)
     @test model1.intrcpt ≈ -39.06195591884395
     @test model2.slope ≈ 61.27218654211064
     @test model2.intrcpt == 0
+    @test linreg(x, y).slope ≈ 1.4
+    @test linreg(x, y).intrcpt ≈ 3.5
+    @test linreg(x, y; intercept = false).intrcpt == 0.0
     @test_throws DimensionMismatch linreg([8,15],[2,4,10])
 end

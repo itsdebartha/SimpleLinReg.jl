@@ -1,14 +1,11 @@
 using SimpleLinReg
 using Test
-using Distributions, Random, StableRNGs
 
-rng = StableRNG(1)
-ϵ = rand(rng,Normal(),1000)
-x = rand(rng,Uniform(),1000)
-y = 2 .+5x .+ϵ
+x = [1, 2, 3, 4]
+y = [6, 5, 7, 10]
 
-linreg(x,y)
-linreg(x,y;intercept = false)
+linreg(x, y)
+linreg(x, y; intercept = false)
 
 include("LinReg.jl")
 include("show.jl")
