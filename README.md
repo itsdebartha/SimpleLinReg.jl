@@ -4,6 +4,7 @@
 
 [![Build Status](https://github.com/itsdebartha/SimpleLinReg.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/itsdebartha/SimpleLinReg.jl/actions/workflows/CI.yml?query=branch%3Amaster)
 [![codecov](https://codecov.io/gh/itsdebartha/SimpleLinReg.jl/branch/master/graph/badge.svg?token=D8XLF38YUT)](https://codecov.io/gh/itsdebartha/SimpleLinReg.jl)
+[![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/itsdebartha/SimpleLinReg.jl)
 
 
 ##  Installation:
