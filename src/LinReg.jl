@@ -18,7 +18,7 @@ Mismatching length of vectors `x` and `y` returns `DimensionMismatch`.
 
 This function cannot handle missing values, yet.
 """
-function linreg(x::Vector,y::Vector;intercept::Bool = true)
+function linreg(x::Vector, y::Vector; intercept::Bool = true)
     length(x) == length(y) || throw(DimensionMismatch("size of x and y does not match"))
     Sx = 0
     Sy = 0

@@ -10,3 +10,4 @@ linreg(x, y; intercept = false)
 
 include("LinReg.jl")
 include("show.jl")
+include("Aqua.jl")
