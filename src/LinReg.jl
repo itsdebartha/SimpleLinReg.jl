@@ -20,9 +20,23 @@ This function cannot handle missing values, yet.
 """
 function linreg(x::Vector,y::Vector;intercept::Bool = true)
     length(x) == length(y) || throw(DimensionMismatch("size of x and y does not match"))
-    β = cov(x,y,corrected=false)/var(x,corrected=false)
+    Sx = 0
+    Sy = 0
+    for i in eachindex(x, y)
+        Sx += x[i]
+        Sy += y[i]
+    end
+    x̄ = Sx / length(x)
+    ȳ = Sy / length(y)
+    Sxy = 0
+    Sxx = 0
+    for i in eachindex(x, y)
+        Sxy += (x[i] - x̄) * (y[i] - ȳ)
+        Sxx += (x[i] - x̄)^2
+    end
+    β = Sxy / Sxx
     if intercept
-        α = mean(y)-mean(x)*β
+        α = ȳ - x̄ * β
     else
         α = 0
     end

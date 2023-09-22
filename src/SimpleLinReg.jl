@@ -1,7 +1,5 @@
 module SimpleLinReg
 
-using StatsBase
-
 # Write your package code here.
 
 include("LinReg.jl")
