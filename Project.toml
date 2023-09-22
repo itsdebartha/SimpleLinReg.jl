@@ -4,9 +4,11 @@ authors = ["Debartha Paul"]
 version = "0.1.1"
 
 [deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 [compat]
+Aqua = "0.7.2"
 Documenter = "0.27, 1"
 julia = "1"
 
@@ -14,4 +16,4 @@ julia = "1"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Aqua", "Test"]
