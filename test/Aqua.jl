@@ -4,6 +4,6 @@ using Aqua
     Aqua.test_all(
         SimpleLinReg;
         stale_deps=false,        # TODO: fix stale dependencies
-        deps_compat=(ignore=[Test])
+        deps_compat=false
     )
 end
