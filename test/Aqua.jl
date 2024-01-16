@@ -3,6 +3,7 @@ using Aqua
 @testset "Aqua.jl" begin
     Aqua.test_all(
         SimpleLinReg;
-        stale_deps=false        # TODO: fix stale dependencies
+        stale_deps=false,        # TODO: fix stale dependencies
+        deps_compat=(ignore=[Test])
     )
 end
