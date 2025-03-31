@@ -10,7 +10,7 @@ end
 """
     linreg(x::Vector,y::Vector;intercept::Bool = true)
 
-Compute the Linear Regression parameters for regression of `y` on `x`.
+Compute the Linear Regression parameters for regression of `y` on `x`, assuming Gauss-Markov Setup for the data.
 
 If `intercept` is unspecified, defaults to `intercept` as `true`.
 
